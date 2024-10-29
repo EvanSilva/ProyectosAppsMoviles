@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <!-- linea normal sin peso -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola!"
+            android:background="@color/yellow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adioh!"
+            android:background="@color/cyan"/>
+
+    </LinearLayout>
+
+    <!-- linea normal CON peso - valor numerico -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Hola!"
+            android:background="@color/yellow"/>
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Adioh!"
+            android:background="@color/cyan"/>
+
+    </LinearLayout>
+
+    <!-- linea normal CON peso - MAL-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola! comovalacosamaquilargo"
+            android:background="@color/yellow"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adioh!"
+            android:background="@color/cyan"
+            android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <!-- linea normal CON peso - BIEN-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hola! comovalacosamaquinamiraquetextomaslargo"
+            android:background="@color/yellow"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Adioh!"
+            android:background="@color/cyan"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- linea normal CON gravity -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hola! comovalacosamaquinamiraquetextomaslargo"
+            android:background="@color/yellow"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Adioh!"
+            android:background="@color/cyan"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Hola! comovalacosamaqui"
+            android:background="@color/yellow"
+            />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Adioh!"
+            android:background="@color/cyan"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
