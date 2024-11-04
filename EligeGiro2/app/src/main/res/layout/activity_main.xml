@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="¿Giramos?"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:id="@+id/txtGiramos"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tether_usdt_crypto_icon_264385"
+        android:visibility="gone"
+        android:id="@+id/imgImagenGone"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto"
+            android:id="@+id/rbTexto" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imagen"
+            android:id="@+id/rbImagen" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/textedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Grados a girar (Entre 10 y 100)"
+        android:inputType="numberSigned"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar"
+        android:id="@+id/btnAceptar"
+        />
+
+
+</LinearLayout>

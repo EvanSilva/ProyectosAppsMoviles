@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:id="@+id/etNombre"
+        android:inputType="textCapWords"
+        android:layout_marginHorizontal="50dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Año de nacimiento"
+        android:id="@+id/etAñoNacimiento"
+        android:inputType="numberSigned"
+        android:layout_marginHorizontal="50dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="left"
+        android:layout_marginLeft="50dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sr."
+            android:id="@+id/rbSeñor"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sra."
+            android:id="@+id/rbSeñora"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Desea despedida?"
+        android:id="@+id/chkDespedida"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="Selecciona el tipo de despedida"
+        android:textColor="@android:color/darker_gray"
+        android:id="@+id/tvTituloTiposDespedida"
+        android:visibility="gone"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-10sp"
+            android:id="@+id/rgTiposDespedida"
+            android:visibility="gone">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adiós"
+                android:id="@+id/rbAdios"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasta Pronto"
+                android:id="@+id/rbHastaPronto"/>
+
+        </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saludar"
+        android:id="@+id/btnSaludar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/red"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvSaludo"
+        android:layout_gravity="left"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/red"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvMayorEdad"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/red"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvDespedida"
+        android:layout_gravity="left"/>
+
+</LinearLayout>
+

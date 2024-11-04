@@ -2,12 +2,15 @@ package com.example.componentesbasicos;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,17 +20,46 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvRespuesta ;
-    CheckBox chkWindows, chkLinux, chkOtros;
-    ImageButton imageButton;
-    RadioGroup rgRespuesta;
-    RadioButton rbSi, rbNo, rbNsNc;
+    private TextView tvRespuesta ;
+    private CheckBox chkWindows, chkLinux, chkOtros;
+    private ImageButton imageButton;
+    private RadioGroup rgRespuesta;
+    private RadioButton rbSi, rbNo, rbNsNc;
+    private EditText etSumando1, etSumando2;
+    private Button btnSumar;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inicializarListas();
+
+
+        // LISTENER DEL BOTON SUMAR
+        btnSumar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+
+                    int sumando1 = Integer.parseInt(etSumando1.getText().toString());
+                    int sumando2 = Integer.parseInt(etSumando2.getText().toString());
+
+                    Integer resultado = sumando1 + sumando2;
+                    tvRespuesta.setText(resultado.toString());
+
+                } catch (Exception e)  {
+                    Toast.makeText(MainActivity.this, "Faltan parámetros por introducir", Toast.LENGTH_LONG).show();
+
+                }
+
+
+
+            }
+        });
+
 
         // Listener para el evento onCheckedChange (Sobre chkOtros)
         chkOtros.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -96,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+
     } // end create
 
     private void inicializarListas() {
@@ -108,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
         rbSi = findViewById(R.id.rb_si);
         rbNo = findViewById(R.id.rb_no);
         rbNsNc = findViewById(R.id.rb_nsnc);
+        btnSumar = findViewById(R.id.btnBotonSuma);
+        etSumando1 = findViewById(R.id.etSumando1);
+        etSumando2 = findViewById(R.id.etSumando2);
+
     }
 
 } // end main
